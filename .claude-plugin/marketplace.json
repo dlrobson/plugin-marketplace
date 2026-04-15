@@ -17,7 +17,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/NikiforovAll/claude-code-rules.git",
-        "git-subdir": "plugins/handbook-glab"
+        "path": "plugins/handbook-glab"
       },
       "strict": true
     },
@@ -33,28 +33,6 @@
       "strict": true
     },
     {
-      "name": "awesome-copilot-refactor",
-      "category": "productivity",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/github/awesome-copilot.git",
-        "git-subdir": "skills/refactor/"
-      },
-      "strict": false
-    },
-    {
-      "name": "plugin-dev",
-      "description": "Comprehensive toolkit for developing Claude Code plugins with expert guidance on hooks, MCP integration, plugin structure, settings, commands, agents, and skills",
-      "category": "developer-tools",
-      "tags": ["plugin-development", "hooks", "mcp", "commands", "agents", "skills", "marketplace"],
-      "source": {
-        "source": "url",
-        "url": "https://github.com/anthropics/claude-code.git",
-        "git-subdir": "plugins/plugin-dev"
-      },
-      "strict": true
-    },
-    {
       "name": "learning-output-style",
       "description": "Interactive learning plugin that encourages active code contribution through SessionStart hooks and provides educational insights about implementation choices",
       "category": "learning",
@@ -62,7 +40,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/anthropics/claude-code.git",
-        "git-subdir": "plugins/learning-output-style"
+        "path": "plugins/learning-output-style"
       },
       "strict": true
     },
@@ -73,8 +51,20 @@
       "source": {
         "source": "url",
         "url": "https://github.com/anthropics/claude-code.git",
-        "git-subdir": "plugins/frontend-design"
-      }
+        "path": "plugins/frontend-design"
+      },
+      "strict": true
+    },
+    {
+      "name": "pr-review-toolkit",
+      "description": "Comprehensive toolkit for reviewing pull requests with automated checks, suggestions, and best practices.",
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/anthropics/claude-code.git",
+        "path": "plugins/pr-review-toolkit"
+      },
+      "strict": true
     }
   ]
 }
