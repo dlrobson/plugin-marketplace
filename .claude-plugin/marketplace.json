@@ -1,37 +1,80 @@
 {
-  "name": "my-team-plugin-marketplace",
+  "name": "dan-robson-plugins",
   "owner": {
-    "name": "Your Organization",
-    "email": "team@your-org.com"
+    "name": "Daniel Robson",
+    "email": "danr.236@gmail.com"
   },
   "metadata": {
-    "description": "A curated collection of Claude Code plugins for our team",
-    "version": "1.3.0"
+    "description": "A curated collection of Claude Code plugins that I use.",
+    "version": "0.1.0"
   },
   "plugins": [
     {
-      "name": "hello-world",
-      "description": "A simple example plugin demonstrating basic Claude Code plugin functionality",
-      "version": "1.0.0",
-      "author": {
-        "name": "Your Team"
+      "name": "handbook-glab",
+      "description": "GitLab CLI (glab) expertise for managing merge requests, issues, CI/CD pipelines, and repositories",
+      "category": "productivity",
+      "tags": ["gitlab", "glab", "merge-requests", "ci-cd", "pipelines", "issues", "devops"],
+      "source": {
+        "source": "url",
+        "url": "https://github.com/NikiforovAll/claude-code-rules.git",
+        "git-subdir": "plugins/handbook-glab"
       },
-      "source": "./plugins/hello-world",
-      "category": "examples",
-      "tags": ["example", "tutorial", "getting-started"],
-      "keywords": ["example", "tutorial", "getting-started"]
+      "strict": true
     },
     {
-      "name": "plugin-development",
-      "description": "Assist with Claude Code plugin development: scaffold, validate, review, and team-ready distribution",
-      "version": "1.3.0",
-      "author": {
-        "name": "Ivan Magda"
+      "name": "superpowers",
+      "description": "Core skills library: TDD, debugging, collaboration patterns, and proven techniques",
+      "category": "productivity",
+      "tags": ["tdd", "debugging", "collaboration", "workflow", "skills"],
+      "source": {
+        "source": "url",
+        "url": "https://github.com/obra/superpowers.git"
       },
-      "source": "./plugins/plugin-development",
+      "strict": true
+    },
+    {
+      "name": "awesome-copilot-refactor",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/github/awesome-copilot.git",
+        "git-subdir": "skills/refactor/"
+      },
+      "strict": false
+    },
+    {
+      "name": "plugin-dev",
+      "description": "Comprehensive toolkit for developing Claude Code plugins with expert guidance on hooks, MCP integration, plugin structure, settings, commands, agents, and skills",
       "category": "developer-tools",
-      "tags": ["development", "plugins", "scaffold", "validation", "tools"],
-      "keywords": ["claude-code", "plugins", "developer-tools", "scaffold", "validation"]
+      "tags": ["plugin-development", "hooks", "mcp", "commands", "agents", "skills", "marketplace"],
+      "source": {
+        "source": "url",
+        "url": "https://github.com/anthropics/claude-code.git",
+        "git-subdir": "plugins/plugin-dev"
+      },
+      "strict": true
+    },
+    {
+      "name": "learning-output-style",
+      "description": "Interactive learning plugin that encourages active code contribution through SessionStart hooks and provides educational insights about implementation choices",
+      "category": "learning",
+      "tags": ["learning", "interactive", "teaching", "explanatory", "education"],
+      "source": {
+        "source": "url",
+        "url": "https://github.com/anthropics/claude-code.git",
+        "git-subdir": "plugins/learning-output-style"
+      },
+      "strict": true
+    },
+    {
+      "name": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics.",
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/anthropics/claude-code.git",
+        "git-subdir": "plugins/frontend-design"
+      }
     }
   ]
 }
