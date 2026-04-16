@@ -1,5 +1,5 @@
 {
-  "name": "dan-robson-plugins",
+  "name": "dlrobson-plugins",
   "owner": {
     "name": "Daniel Robson",
     "email": "danr.236@gmail.com"
@@ -65,6 +65,19 @@
         "path": "plugins/pr-review-toolkit"
       },
       "strict": true
+    },
+    {
+      "name": "awesome-copilot-refactor",
+      "description": "Surgical code refactoring skill: extract functions, rename variables, break down god functions, improve type safety, eliminate code smells, and apply design patterns",
+      "category": "productivity",
+      "source": "./plugins/awesome-copilot-refactor"
+    },
+    {
+      "name": "plugin-dev",
+      "description": "Comprehensive toolkit for developing Claude Code plugins with expert guidance on hooks, MCP integration, plugin structure, settings, commands, agents, and skills",
+      "category": "developer-tools",
+      "tags": ["plugin-development", "hooks", "mcp", "commands", "agents", "skills", "marketplace"],
+      "source": "./plugins/plugin-dev"
     }
   ]
 }

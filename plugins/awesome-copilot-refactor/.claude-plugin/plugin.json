@@ -1,0 +1,13 @@
+{
+  "name": "awesome-copilot-refactor",
+  "version": "1.0.0",
+  "description": "Surgical code refactoring skill: extract functions, rename variables, break down god functions, improve type safety, eliminate code smells, and apply design patterns",
+  "author": {
+    "name": "GitHub",
+    "url": "https://github.com/github/awesome-copilot"
+  },
+  "homepage": "https://github.com/github/awesome-copilot/tree/main/skills/refactor",
+  "repository": "https://github.com/github/awesome-copilot",
+  "license": "MIT",
+  "keywords": ["refactoring", "code-quality", "design-patterns", "clean-code"]
+}
