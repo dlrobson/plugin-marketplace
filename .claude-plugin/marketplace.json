@@ -73,17 +73,6 @@
       "source": "./plugins/awesome-copilot-refactor"
     },
     {
-      "name": "episodic-memory",
-      "description": "Semantic search for Claude Code conversations — surface past decisions, patterns, and discussions across sessions",
-      "category": "productivity",
-      "tags": ["memory", "search", "semantic-search", "conversations", "context"],
-      "source": {
-        "source": "url",
-        "url": "https://github.com/obra/episodic-memory.git"
-      },
-      "strict": true
-    },
-    {
       "name": "plugin-dev",
       "description": "Comprehensive toolkit for developing Claude Code plugins with expert guidance on hooks, MCP integration, plugin structure, settings, commands, agents, and skills",
       "category": "developer-tools",
