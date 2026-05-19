@@ -1,0 +1,11 @@
+{
+  "name": "direnv",
+  "version": "1.0.0",
+  "description": "Reload environment variables with direnv on session start and directory changes",
+  "author": {
+    "name": "Daniel Robson",
+    "email": "danr.236@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["direnv", "environment", "nix", "devshell"]
+}

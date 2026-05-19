@@ -1,0 +1,11 @@
+{
+  "name": "auto-format",
+  "version": "1.0.0",
+  "description": "Auto-format code after each turn by running the repo's fix command from nix-shell",
+  "author": {
+    "name": "Daniel Robson",
+    "email": "danr.236@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["formatting", "nixfmt", "nix", "code-style", "fix"]
+}

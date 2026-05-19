@@ -78,6 +78,27 @@
       "category": "developer-tools",
       "tags": ["plugin-development", "hooks", "mcp", "commands", "agents", "skills", "marketplace"],
       "source": "./plugins/plugin-dev"
+    },
+    {
+      "name": "desktop-notifications",
+      "description": "Desktop notifications via notify-send when Claude needs your attention",
+      "category": "productivity",
+      "tags": ["notifications", "notify-send", "linux"],
+      "source": "./plugins/desktop-notifications"
+    },
+    {
+      "name": "auto-format",
+      "description": "Auto-format code at the end of each turn by running the repo's nix-shell format command",
+      "category": "productivity",
+      "tags": ["formatting", "nix", "code-style"],
+      "source": "./plugins/auto-format"
+    },
+    {
+      "name": "direnv",
+      "description": "Reload environment variables with direnv on session start and directory changes",
+      "category": "productivity",
+      "tags": ["direnv", "environment", "nix", "devshell"],
+      "source": "./plugins/direnv"
     }
   ]
 }

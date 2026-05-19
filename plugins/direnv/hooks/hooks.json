@@ -1,0 +1,25 @@
+{
+  "description": "Reload direnv environment on session start and directory changes",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "direnv export bash > \"$CLAUDE_ENV_FILE\""
+          }
+        ]
+      }
+    ],
+    "CwdChanged": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "direnv export bash > \"$CLAUDE_ENV_FILE\""
+          }
+        ]
+      }
+    ]
+  }
+}
