@@ -15,7 +15,7 @@
       "category": "productivity",
       "tags": ["gitlab", "glab", "merge-requests", "ci-cd", "pipelines", "issues", "devops"],
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/NikiforovAll/claude-code-rules.git",
         "path": "plugins/handbook-glab"
       },
@@ -38,7 +38,7 @@
       "category": "learning",
       "tags": ["learning", "interactive", "teaching", "explanatory", "education"],
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/anthropics/claude-code.git",
         "path": "plugins/learning-output-style"
       },
@@ -49,7 +49,7 @@
       "description": "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics.",
       "category": "development",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/anthropics/claude-code.git",
         "path": "plugins/frontend-design"
       },
@@ -60,7 +60,7 @@
       "description": "Comprehensive toolkit for reviewing pull requests with automated checks, suggestions, and best practices.",
       "category": "development",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/anthropics/claude-code.git",
         "path": "plugins/pr-review-toolkit"
       },
