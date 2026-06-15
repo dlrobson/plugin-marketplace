@@ -92,6 +92,17 @@
       "category": "productivity",
       "tags": ["direnv", "environment", "nix", "devshell"],
       "source": "./plugins/direnv"
+    },
+    {
+      "name": "claude-mem",
+      "description": "Persistent memory across sessions: captures tool observations, compresses them with AI, and injects relevant context into future sessions",
+      "category": "productivity",
+      "tags": ["memory", "persistence", "context", "sessions", "mcp", "vector-search"],
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/thedotmack/claude-mem.git",
+        "path": "plugin"
+      }
     }
   ]
 }
