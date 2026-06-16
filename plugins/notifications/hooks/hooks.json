@@ -1,0 +1,16 @@
+{
+  "description": "Notify via desktop (notify-send) and tmux bell when Claude needs attention",
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v notify-send >/dev/null 2>&1 && notify-send 'Claude Code' 'Claude needs your attention'; [ -n \"$TMUX\" ] && printf '\\a'"
+          }
+        ]
+      }
+    ]
+  }
+}

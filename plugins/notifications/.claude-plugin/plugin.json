@@ -1,0 +1,11 @@
+{
+  "name": "notifications",
+  "version": "1.0.0",
+  "description": "Notify via desktop (notify-send) and tmux bell when Claude needs your attention",
+  "author": {
+    "name": "Daniel Robson",
+    "email": "danr.236@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["notifications", "notify-send", "tmux", "linux", "productivity"]
+}
