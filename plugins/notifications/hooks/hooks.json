@@ -1,5 +1,5 @@
 {
-  "description": "Notify via desktop (notify-send) and tmux bell when Claude finishes or needs attention",
+  "description": "Notify via desktop (notify-send) and tmux indicator when Claude finishes or needs attention",
   "hooks": {
     "Stop": [
       {
@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/$(id -u)/bus\" notify-send 'Claude Code' 'Claude finished' 2>/dev/null || true; [ -n \"$TMUX\" ] && printf '\\a' > \"$(tmux display-message -p '#{pane_tty}' 2>/dev/null)\""
+            "command": "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/$(id -u)/bus\" notify-send 'Claude Code' 'Claude finished' 2>/dev/null || true; [ -n \"$TMUX\" ] && tmux set-window-option @claude_done \"!\""
           }
         ]
       }
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/$(id -u)/bus\" notify-send 'Claude Code' 'Claude needs your attention' 2>/dev/null || true; [ -n \"$TMUX\" ] && printf '\\a' > \"$(tmux display-message -p '#{pane_tty}' 2>/dev/null)\""
+            "command": "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/$(id -u)/bus\" notify-send 'Claude Code' 'Claude needs your attention' 2>/dev/null || true; [ -n \"$TMUX\" ] && tmux set-window-option @claude_done \"!\""
           }
         ]
       }
