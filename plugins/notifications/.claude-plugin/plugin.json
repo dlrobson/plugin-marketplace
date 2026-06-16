@@ -1,6 +1,6 @@
 {
   "name": "notifications",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Notify via desktop (notify-send) and tmux bell when Claude finishes or needs your attention",
   "author": {
     "name": "Daniel Robson",
