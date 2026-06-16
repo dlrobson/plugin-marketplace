@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/$(id -u)/bus\" notify-send 'Claude Code' 'Claude finished' 2>/dev/null || true; [ -n \"$TMUX_PANE\" ] && tmux set-window-option -t \"$TMUX_PANE\" @claude_done \"!\""
+            "command": "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/$(id -u)/bus\" notify-send 'Claude Code' 'Claude finished' 2>/dev/null || true; [ -n \"$TMUX_PANE\" ] && tmux set-window-option -t \"$TMUX_PANE\" @claude_done \" !\""
           }
         ]
       }
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/$(id -u)/bus\" notify-send 'Claude Code' 'Claude needs your attention' 2>/dev/null || true; [ -n \"$TMUX_PANE\" ] && tmux set-window-option -t \"$TMUX_PANE\" @claude_done \"!\""
+            "command": "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/$(id -u)/bus\" notify-send 'Claude Code' 'Claude needs your attention' 2>/dev/null || true; [ -n \"$TMUX_PANE\" ] && tmux set-window-option -t \"$TMUX_PANE\" @claude_done \" !\""
           }
         ]
       }
