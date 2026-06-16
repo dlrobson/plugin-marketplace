@@ -80,11 +80,11 @@
       "source": "./plugins/plugin-dev"
     },
     {
-      "name": "desktop-notifications",
-      "description": "Desktop notifications via notify-send when Claude needs your attention",
+      "name": "notifications",
+      "description": "Notifications via desktop (notify-send) and tmux bell when Claude needs your attention",
       "category": "productivity",
-      "tags": ["notifications", "notify-send", "linux"],
-      "source": "./plugins/desktop-notifications"
+      "tags": ["notifications", "notify-send", "tmux", "linux"],
+      "source": "./plugins/notifications"
     },
     {
       "name": "direnv",
