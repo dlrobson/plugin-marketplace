@@ -1,6 +1,17 @@
 {
-  "description": "Notify via desktop (notify-send) and tmux bell when Claude needs attention",
+  "description": "Notify via desktop (notify-send) and tmux bell when Claude finishes or needs attention",
   "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v notify-send >/dev/null 2>&1 && notify-send 'Claude Code' 'Claude finished'; [ -n \"$TMUX\" ] && printf '\\a'"
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "matcher": "",
