@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "command -v notify-send >/dev/null 2>&1 && notify-send 'Claude Code' 'Claude finished'; [ -n \"$TMUX\" ] && printf '\\a'"
+            "command": "command -v notify-send >/dev/null 2>&1 && notify-send 'Claude Code' 'Claude finished'; [ -n \"$TMUX\" ] && printf '\\a' > \"$(tmux display-message -p '#{pane_tty}')\""
           }
         ]
       }
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "command -v notify-send >/dev/null 2>&1 && notify-send 'Claude Code' 'Claude needs your attention'; [ -n \"$TMUX\" ] && printf '\\a'"
+            "command": "command -v notify-send >/dev/null 2>&1 && notify-send 'Claude Code' 'Claude needs your attention'; [ -n \"$TMUX\" ] && printf '\\a' > \"$(tmux display-message -p '#{pane_tty}')\""
           }
         ]
       }
