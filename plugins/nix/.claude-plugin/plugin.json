@@ -1,0 +1,11 @@
+{
+  "name": "nix",
+  "version": "1.0.0",
+  "description": "NixOS and nixpkgs search via mcp-nixos — query 130K+ packages, 23K+ NixOS options, Home Manager options, and more",
+  "author": {
+    "name": "Daniel Robson",
+    "email": "danr.236@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["nix", "nixos", "nixpkgs", "home-manager", "packages", "options"]
+}

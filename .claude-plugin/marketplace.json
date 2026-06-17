@@ -94,6 +94,13 @@
       "source": "./plugins/direnv"
     },
     {
+      "name": "nix",
+      "description": "NixOS and nixpkgs search via mcp-nixos — query packages, NixOS options, Home Manager options, nix-darwin, and more",
+      "category": "productivity",
+      "tags": ["nix", "nixos", "nixpkgs", "home-manager", "packages", "options"],
+      "source": "./plugins/nix"
+    },
+    {
       "name": "claude-mem",
       "description": "Persistent memory across sessions: captures tool observations, compresses them with AI, and injects relevant context into future sessions",
       "category": "productivity",
