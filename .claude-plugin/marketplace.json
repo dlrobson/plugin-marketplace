@@ -67,13 +67,6 @@
       "strict": true
     },
     {
-      "name": "plugin-dev",
-      "description": "Comprehensive toolkit for developing Claude Code plugins with expert guidance on hooks, MCP integration, plugin structure, settings, commands, agents, and skills",
-      "category": "developer-tools",
-      "tags": ["plugin-development", "hooks", "mcp", "commands", "agents", "skills", "marketplace"],
-      "source": "./plugins/plugin-dev"
-    },
-    {
       "name": "notifications",
       "description": "Notifications via desktop (notify-send) and tmux bell when Claude needs your attention",
       "category": "productivity",

@@ -1,0 +1,1 @@
+../../plugins/plugin-dev/agents/skill-reviewer.md

@@ -1,0 +1,1 @@
+../../plugins/plugin-dev/commands/create-plugin.md
