@@ -93,17 +93,6 @@
       "category": "productivity",
       "tags": ["nix", "nixos", "nixpkgs", "home-manager", "packages", "options"],
       "source": "./plugins/nix"
-    },
-    {
-      "name": "claude-mem",
-      "description": "Persistent memory across sessions: captures tool observations, compresses them with AI, and injects relevant context into future sessions",
-      "category": "productivity",
-      "tags": ["memory", "persistence", "context", "sessions", "mcp", "vector-search"],
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/thedotmack/claude-mem.git",
-        "path": "plugin"
-      }
     }
   ]
 }
