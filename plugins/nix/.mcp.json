@@ -1,6 +1,6 @@
 {
   "mcp-nixos": {
-    "command": "uvx",
-    "args": ["mcp-nixos"]
+    "command": "sh",
+    "args": ["-c", "UV_PYTHON=$(which python3) uvx mcp-nixos"]
   }
 }
