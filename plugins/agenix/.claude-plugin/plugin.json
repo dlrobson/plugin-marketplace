@@ -1,0 +1,11 @@
+{
+  "name": "agenix",
+  "version": "1.0.0",
+  "description": "Safe agenix secret management — read, write, and rekey age-encrypted NixOS secrets without foot-guns",
+  "author": {
+    "name": "Daniel Robson",
+    "email": "danr.236@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["agenix", "age", "nix", "nixos", "secrets", "encryption"]
+}
