@@ -1,6 +1,6 @@
 ---
 name: agenix-secrets
-description: This skill should be used when the user asks to "encrypt this value", "update the API key secret", "add a new secret for X", "rekey secrets", "rekey everything", "write a secret", "read a secret", "decrypt a secret", or any task involving reading, writing, or rekeying age-encrypted agenix secrets.
+description: This skill should be used when the user mentions "agenix", asks about ".age files", "secrets.nix", or age-encrypted NixOS secrets, or asks to "encrypt an agenix secret", "update an agenix secret", "add a new agenix secret", "rekey agenix secrets", "decrypt a .age file", or any task involving reading, writing, or rekeying age-encrypted agenix secrets.
 version: 1.0.0
 ---
 
