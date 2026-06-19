@@ -10,81 +10,41 @@
   },
   "plugins": [
     {
-      "name": "handbook-glab",
-      "description": "GitLab CLI (glab) expertise for managing merge requests, issues, CI/CD pipelines, and repositories",
-      "category": "productivity",
-      "tags": ["gitlab", "glab", "merge-requests", "ci-cd", "pipelines", "issues", "devops"],
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/NikiforovAll/claude-code-rules.git",
-        "path": "plugins/handbook-glab"
-      },
-      "strict": true
-    },
-    {
-      "name": "superpowers",
-      "description": "Core skills library: TDD, debugging, collaboration patterns, and proven techniques",
-      "category": "productivity",
-      "tags": ["tdd", "debugging", "collaboration", "workflow", "skills"],
-      "source": {
-        "source": "url",
-        "url": "https://github.com/obra/superpowers.git"
-      },
-      "strict": true
-    },
-    {
-      "name": "learning-output-style",
-      "description": "Interactive learning plugin that encourages active code contribution through SessionStart hooks and provides educational insights about implementation choices",
-      "category": "learning",
-      "tags": ["learning", "interactive", "teaching", "explanatory", "education"],
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/anthropics/claude-code.git",
-        "path": "plugins/learning-output-style"
-      },
-      "strict": true
-    },
-    {
-      "name": "frontend-design",
-      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics.",
-      "category": "development",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/anthropics/claude-code.git",
-        "path": "plugins/frontend-design"
-      },
-      "strict": true
-    },
-    {
-      "name": "pr-review-toolkit",
-      "description": "Comprehensive toolkit for reviewing pull requests with automated checks, suggestions, and best practices.",
-      "category": "development",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/anthropics/claude-code.git",
-        "path": "plugins/pr-review-toolkit"
-      },
-      "strict": true
-    },
-    {
       "name": "notifications",
       "description": "Notifications via desktop (notify-send) and tmux bell when Claude needs your attention",
       "category": "productivity",
-      "tags": ["notifications", "notify-send", "tmux", "linux"],
+      "tags": [
+        "notifications",
+        "notify-send",
+        "tmux",
+        "linux"
+      ],
       "source": "./plugins/notifications"
     },
     {
       "name": "direnv",
       "description": "Reload environment variables with direnv on session start and directory changes",
       "category": "productivity",
-      "tags": ["direnv", "environment", "nix", "devshell"],
+      "tags": [
+        "direnv",
+        "environment",
+        "nix",
+        "devshell"
+      ],
       "source": "./plugins/direnv"
     },
     {
       "name": "nix",
-      "description": "NixOS and nixpkgs search via mcp-nixos — query packages, NixOS options, Home Manager options, nix-darwin, and more",
+      "description": "NixOS and nixpkgs search via mcp-nixos \u2014 query packages, NixOS options, Home Manager options, nix-darwin, and more",
       "category": "productivity",
-      "tags": ["nix", "nixos", "nixpkgs", "home-manager", "packages", "options"],
+      "tags": [
+        "nix",
+        "nixos",
+        "nixpkgs",
+        "home-manager",
+        "packages",
+        "options"
+      ],
       "source": "./plugins/nix"
     },
     {
