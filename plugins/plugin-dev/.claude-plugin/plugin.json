@@ -1,0 +1,11 @@
+{
+  "name": "plugin-dev",
+  "version": "1.0.0",
+  "description": "Tools for developing Claude Code plugins — agents, skills, commands, hooks, and MCP integrations",
+  "author": {
+    "name": "Daniel Robson",
+    "email": "danr.236@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["plugin", "development", "skills", "agents", "commands", "hooks", "mcp"]
+}

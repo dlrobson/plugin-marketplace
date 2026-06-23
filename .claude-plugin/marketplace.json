@@ -35,7 +35,7 @@
     },
     {
       "name": "nix",
-      "description": "NixOS and nixpkgs search via mcp-nixos \u2014 query packages, NixOS options, Home Manager options, nix-darwin, and more",
+      "description": "NixOS and nixpkgs search via mcp-nixos — query packages, NixOS options, Home Manager options, nix-darwin, and more",
       "category": "productivity",
       "tags": [
         "nix",
@@ -51,8 +51,30 @@
       "name": "agenix",
       "description": "Safe agenix secret management — read, write, and rekey age-encrypted NixOS secrets without foot-guns",
       "category": "productivity",
-      "tags": ["agenix", "age", "nix", "nixos", "secrets", "encryption"],
+      "tags": [
+        "agenix",
+        "age",
+        "nix",
+        "nixos",
+        "secrets",
+        "encryption"
+      ],
       "source": "./plugins/agenix"
+    },
+    {
+      "name": "plugin-dev",
+      "description": "Tools for developing Claude Code plugins — agents, skills, commands, hooks, and MCP integrations",
+      "category": "productivity",
+      "tags": [
+        "plugin",
+        "development",
+        "skills",
+        "agents",
+        "commands",
+        "hooks",
+        "mcp"
+      ],
+      "source": "./plugins/plugin-dev"
     }
   ]
 }
