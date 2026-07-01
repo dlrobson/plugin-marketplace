@@ -60,21 +60,6 @@
         "encryption"
       ],
       "source": "./plugins/agenix"
-    },
-    {
-      "name": "plugin-dev",
-      "description": "Tools for developing Claude Code plugins — agents, skills, commands, hooks, and MCP integrations",
-      "category": "productivity",
-      "tags": [
-        "plugin",
-        "development",
-        "skills",
-        "agents",
-        "commands",
-        "hooks",
-        "mcp"
-      ],
-      "source": "./plugins/plugin-dev"
     }
   ]
 }
