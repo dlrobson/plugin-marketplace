@@ -60,6 +60,20 @@
         "encryption"
       ],
       "source": "./plugins/agenix"
+    },
+    {
+      "name": "plugin-dev",
+      "description": "Plugin development toolkit with skills for creating agents, commands, hooks, MCP integrations, and comprehensive plugin structure guidance (forked from the official marketplace with skills marked disable-model-invocation, so they don't auto-trigger every session)",
+      "category": "productivity",
+      "tags": [
+        "plugin-development",
+        "skills",
+        "agents",
+        "commands",
+        "hooks",
+        "mcp"
+      ],
+      "source": "./plugins/plugin-dev"
     }
   ]
 }
