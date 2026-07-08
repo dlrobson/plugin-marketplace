@@ -1,11 +1,11 @@
 {
   "name": "notifications",
-  "version": "1.7.0",
-  "description": "Notify via desktop (notify-send) and tmux bell when Claude finishes or needs your attention",
+  "version": "1.8.0",
+  "description": "Notify via desktop (notify-send), tmux bell, and Ghostty when Claude finishes or needs your attention",
   "author": {
     "name": "Daniel Robson",
     "email": "danr.236@gmail.com"
   },
   "license": "MIT",
-  "keywords": ["notifications", "notify-send", "tmux", "linux", "productivity"]
+  "keywords": ["notifications", "notify-send", "tmux", "ghostty", "linux", "productivity"]
 }
