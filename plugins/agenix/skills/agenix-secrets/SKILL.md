@@ -1,12 +1,40 @@
 ---
 name: agenix-secrets
-description: Use when working with agenix-encrypted secrets: reading, writing, adding, updating, or rekeying .age files, or editing secrets.nix.
+description: This skill should be used when reading, writing, adding, updating, removing, renaming, or rekeying agenix-encrypted .age secrets, or editing the secrets.nix recipient declarations.
 version: 1.0.0
 ---
 
 # agenix Secret Management
 
 agenix encrypts NixOS secrets using `age`. Each `.age` file is encrypted for one or more SSH public key recipients declared in `secrets.nix`. The agenix CLI handles decryption; `age` itself handles encryption.
+
+**Every agenix command below must be run from the directory containing `secrets.nix`** — agenix reads recipient keys from there, even for decryption.
+
+---
+
+## secrets.nix Syntax
+
+Each `.age` file gets an entry listing its recipient public keys:
+
+```nix
+let
+  user1 = "ssh-ed25519 AAAA...";
+  host1 = "ssh-ed25519 AAAA...";
+in
+{
+  "secret-name.age".publicKeys = [ user1 host1 ];
+}
+```
+
+- Add a host/user as a recipient of a secret by adding its public key to that secret's `publicKeys` list, then rekey (see below) so the `.age` file is actually re-encrypted for the new key
+
+---
+
+## Adding a New Secret
+
+1. Add an entry for it in `secrets.nix` with the intended recipients (see above) — agenix looks up recipients from this file, so the entry must exist before encrypting
+2. Create and encrypt it the same way as updating an existing secret (below)
+3. Verify by decrypting
 
 ---
 
@@ -15,11 +43,8 @@ agenix encrypts NixOS secrets using `age`. Each `.age` file is encrypted for one
 Decrypt a secret to stdout:
 
 ```bash
-cd /path/to/secrets-dir   # must contain secrets.nix
 agenix -d path/to/secret.age -i <path/to/identity-key>
 ```
-
-Must run from the directory containing `secrets.nix` — agenix looks up the file's registered keys there even for decryption.
 
 ---
 
@@ -28,13 +53,12 @@ Must run from the directory containing `secrets.nix` — agenix looks up the fil
 `agenix -e` handles piped input automatically — when STDIN is not interactive, agenix sets `EDITOR` to `cp /dev/stdin`, so piping the secret value works directly:
 
 ```bash
-cd /path/to/secrets-dir   # must contain secrets.nix
 printf 'YOUR_SECRET_VALUE\n' | agenix -e path/to/secret.age -i <path/to/identity-key>
 ```
 
 - Use `printf` (not `echo`) to control trailing newlines precisely
-- Must run from the directory containing `secrets.nix` — agenix reads recipient keys from there automatically
-- No need to look up or pass recipient keys manually
+- No need to look up or pass recipient keys manually — agenix reads them from `secrets.nix`
+- For values containing single quotes, `$`, backticks, or other shell-special characters, write the value to a temp file first and pipe with `cat tempfile | agenix -e FILE -i KEY` rather than embedding it in a quoted `printf` argument
 
 ### Verify immediately
 
@@ -48,14 +72,19 @@ If this outputs nothing or errors, the write failed — check identity key and s
 
 ---
 
+## Removing or Renaming a Secret
+
+**Removing:** delete both the `.age` file and its `secrets.nix` entry. No rekey needed.
+
+**Renaming:** rename the `.age` file (`git mv old-name.age new-name.age`) and update the corresponding key in `secrets.nix` to match. No rekey needed — the ciphertext is unchanged, only the filename and its `secrets.nix` reference move.
+
+---
+
 ## Rekeying All Secrets
 
 Rekey when recipient keys in `secrets.nix` have changed (new host added, key rotated, etc.). Rekeying re-encrypts every `.age` file for the current set of recipients.
 
-**Must run from the directory containing `secrets.nix`:**
-
 ```bash
-cd /path/to/secrets-dir
 agenix -r -i <path/to/identity-key>
 ```
 
@@ -66,13 +95,30 @@ agenix -r -i <path/to/identity-key>
 
 ---
 
+## Rekeying a Single Secret
+
+`agenix -r` always rekeys every `.age` file — there is no `-r FILE` option. But `agenix -e` re-encrypts unconditionally (skipping its usual "no changes, skip" check) when `EDITOR` is set to `:`, which is the exact mechanism `-r` uses internally per file. This enables rekeying a single file:
+
+```bash
+EDITOR=: agenix -e path/to/secret.age -i <path/to/identity-key>
+```
+
+- Does not open an editor and does not change the plaintext — only re-encrypts against the recipients currently listed in `secrets.nix` for that file
+- Leaves every other `.age` file untouched (verified: byte-identical before/after)
+- Useful for code review noise: after adding/rotating one recipient, rekey only the affected secret(s) instead of the whole directory
+- Verify afterward with `agenix -d path/to/secret.age -i <identity>`
+
+---
+
 ## Key Facts
 
 | Thing | Value |
 |---|---|
+| Working directory | Every command must run from the directory containing `secrets.nix` |
 | Identity key | The agenix SSH identity key — pass with `-i <path/to/identity-key>` |
 | Recipient keys | Declared per-secret in `secrets.nix` under `publicKeys` |
 | Safe write method | `printf '...' \| agenix -e FILE -i KEY` (pipes work; agenix sets EDITOR to `cp /dev/stdin`) |
+| Rekey one secret | `EDITOR=: agenix -e FILE -i KEY` (forces re-encryption without touching other files) |
 | After writing | Verify with `agenix -d` immediately |
 
 ---
@@ -81,5 +127,5 @@ agenix -r -i <path/to/identity-key>
 
 **Forgetting to verify** → a failed encrypt leaves a zero-byte or corrupt file that will break service startup silently.
 
-**Running `agenix -r` from the wrong directory** → rekey must be run from the directory containing `secrets.nix`, not a subdirectory or parent.
+**Using plain `agenix -e FILE` to force a rekey** → if the plaintext is unchanged, agenix detects "no diff" and skips re-encryption. Use `EDITOR=: agenix -e FILE -i KEY` to force re-encryption of just that file.
 
