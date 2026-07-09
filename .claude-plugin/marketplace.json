@@ -10,18 +10,6 @@
   },
   "plugins": [
     {
-      "name": "notifications",
-      "description": "Notifications via desktop (notify-send) and tmux bell when Claude needs your attention",
-      "category": "productivity",
-      "tags": [
-        "notifications",
-        "notify-send",
-        "tmux",
-        "linux"
-      ],
-      "source": "./plugins/notifications"
-    },
-    {
       "name": "direnv",
       "description": "Reload environment variables with direnv on session start and directory changes",
       "category": "productivity",
