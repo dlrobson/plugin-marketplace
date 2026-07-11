@@ -1,0 +1,6 @@
+{
+  "name": "agenix",
+  "version": "1.0.0",
+  "description": "Safe agenix secret management — read, write, and rekey age-encrypted NixOS secrets without foot-guns",
+  "skills": "./skills"
+}
